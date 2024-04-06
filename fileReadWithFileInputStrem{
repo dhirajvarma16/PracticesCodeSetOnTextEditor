@@ -13,8 +13,8 @@ public fileReadWithFileInputStrem{
 			while((i=is.read())!=-1)
 			{	
 			fis.read((char)i);
-			fis.close();
 			}
+		fis.close();
 		}catch(IOExceptions e){
 			e.printstackTrace();
 		}
