@@ -10,8 +10,11 @@ public fileReadWithFileInputStrem{
 		try{
 			int i;
 			FileInputStream fis=new FileInputStream();
+			while((i=is.read())!=-1)
+			{	
 			fis.read((char)i);
 			fis.close();
+			}
 		}catch(IOExceptions e){
 			e.printstackTrace();
 		}
