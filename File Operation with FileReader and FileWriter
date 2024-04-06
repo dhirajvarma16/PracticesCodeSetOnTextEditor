@@ -1,0 +1,51 @@
+File Operation
+
+
+public class FileOperation{
+	
+
+	public static void main(String[] args){
+		File file=new File ("\\test_data.properties");
+		InputStream inpstream= new InputStream(file);
+
+		// If File Does not Exists, Lets create it
+
+		if(!file.exists()){
+			try {
+				file.createNewFile();
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		// IF file exists, Lets write something it it, to achieve this we can use FileWriter fw=FileWriter()
+
+		try{
+			FileWriter fw= new FileWriter(file);
+			fw.write("First Line");
+			fw.close();
+		}catch(IOException e){
+			e.printStrackTrace();
+		}
+
+		// If file exists, Lets read something it, to achieve this we can use FileWriter fw=FileWriter()
+
+
+		try{
+			FileReader fr= new FileReader(file);
+			int i;
+			while(i=fw.read() != -1){
+			System.out.println((char)i);	
+			}
+			fw.close();
+		}catch(FileNotFoundException e){
+			e.printStrackTrace();
+		}
+		catch(IOException e){
+			e.printStrackTrace();
+		}
+
+	}
+
+}
