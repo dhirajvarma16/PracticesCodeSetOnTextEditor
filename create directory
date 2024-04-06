@@ -1,0 +1,23 @@
+public class createDirectoryStructure
+{
+	publis static void main(String[] args){
+		String dirPath= "anotherDir" + File.seperator + "anotherFile";
+		File fis= new File(dirPath);
+
+		if(!fis.exists()){
+			fis.mkdir();
+		}
+
+		File fis=new File(dirPath+File.seperator+"MyFile.txt");
+
+		if(!file.exists()){
+			try{
+				fis.createNewFile();
+			}catch(){
+				e.printstackTrace();
+			}
+		}
+
+	}
+
+}
